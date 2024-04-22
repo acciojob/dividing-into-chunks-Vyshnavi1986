@@ -3,18 +3,20 @@ const arr = [1, 2, 3, 4, 1, 0, 2, 2];
 const divide = (arr, n) => {
   // Write your code here
 	// Pick a starting point
-	let sum=5;
-    for (let i = 0; i < n; i++) {
+	let n=5;
+    for (let i = 0; i < n; i++)
+	{
         let currentSum = arr[i];
  
-        if (currentSum == sum) {
+        if (currentSum == sum) 
+		{
             console.log("Sum found at indexes " +i);
             return;
         }
         else {
             // Try all subarrays starting with 'i'
             for (let j = i + 1; j < n; j++) {
-                currentSum += arr[j];
+                currentSum =currentSum+" "+ arr[j];
  
                 if (currentSum == sum) {
                     console.log("Sum found between indexes "
